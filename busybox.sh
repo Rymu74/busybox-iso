@@ -12,7 +12,7 @@ cd linux
         tar -xvf linux-$KERNEL_VERSION.tar.xz
         cd linux-$KERNEL_VERSION
             make defconfig
-            make -j$(nproc)
+            make -j$(nproc) || exit
             cp arch/x86_64/boot/bzImage ../../vmlinuz
             cd ..
         cd ..
@@ -21,7 +21,7 @@ cd linux
     cd busybox-$BUSYBOX_VERSION
 		make defconfig
 		sed 's/^.*CONFIG_STATIC[^_].*$/CONFIG_STATIC=y/g' -i .config
-		make -j$(nproc) busybox
+		make -j$(nproc) busybox || exit
 	cd ..
 
     cp busybox-$BUSYBOX_VERSION/busybox initrd/busybox
