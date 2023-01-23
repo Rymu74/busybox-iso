@@ -43,7 +43,7 @@ exec /bin/sh' > init
     mkdir cdboot
     tar -xvf syslinux-6.04-pre1.tar.xz
     mv syslinux-6.04-pre1/ syslinux/
-    cp vmlinuz initrd.img syslinux/bios/core/isolinux.bin cd syslinux/bios/com32/elflink/ldlinux/ldlinux.c32 cdboot/
+    cp vmlinuz initrd.img syslinux/bios/core/isolinux.bin syslinux/bios/com32/elflink/ldlinux/ldlinux.c32 cdboot/
     cd cdboot
         mkdir isolinux
         mv isolinux.bin ldlinux.c32 isolinux/
