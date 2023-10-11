@@ -1,7 +1,7 @@
 #!/bin/bash
 
-KERNEL_VERSION=5.15.86
-BUSYBOX_VERSION=1.35.0
+KERNEL_VERSION=6.5.7
+BUSYBOX_VERSION=1.36.1
 
 mkdir linux
 cd linux
